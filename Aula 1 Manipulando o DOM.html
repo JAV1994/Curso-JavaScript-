@@ -16,10 +16,21 @@
     <h1>Iniciando estudos com DOM</h1>
     <p>Aqui vai um resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong></p>
-    <div>Clique em mim</div>
+    <div id = "msg">Clique em mim</div>
     <script>
+      // coloca um elemento html dentro de uma variavel
+      let p1 = window.document.getElementsByTagName('p')[1]; // selecao por tag
+      let p2 = window.document.getElementById('msg'); // selecao por seletor
+      p2.style.background = "purple";
+      p1.style.color = 'black';
+
+      let p3 = window.document.querySelector('div#msg');
+      p3.style.background = "blue";
+
+      let corpo = window.document.body;
+      corpo.background = 'black';
       // Acessando a arvore DOM
-      window.document.write(window.document.URL);
+      //window.document.write(p1.innerText);
     </script>
   </body>
 </html>
